@@ -12,9 +12,18 @@ def main():
     # Data Processing
     tX, tX_test = fix_nonexisting(tX, tX_test)
     tX, tX_test = standardize(tX, tX_test)
+    
+    # Feature Expension
+    tX = build_poly(tX, 11)
+    tX_test = build_poly(tX_test, 11)
 
     # Train model with optimized parameter
-    loss, w = ridge_regression(y, tX, 0.005736152510448681)
+    loss, w = ridge_regression(y, tX, 5e-3)
+
+    # y_test = predict_labels(w, tX)
+    # bb = y_test - y
+    # print(bb)
+    #print(np.nonzero(bb == 0) / len(y))
 
     # Write Predictions to file
     OUTPUT_PATH = 'data/final-submission.csv'

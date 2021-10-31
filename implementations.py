@@ -32,7 +32,7 @@ def compute_gradient(y, tx, w):
     return -tx.T.dot(e)/len(y)
 
 
-def gradient_descent(y, tx, initial_w, max_iters, gamma):
+def least_squaresGD(y, tx, initial_w, max_iters, gamma):
     """
     Gradient descent algorithm.
     :param y: labels
@@ -64,7 +64,7 @@ def compute_stoch_gradient(y, tx, w, batch_size):
     return -tx[A].T.dot(e)/batch_size
 
 
-def stochastic_gradient_descent(
+def least_squaresSGD(
         y, tx, initial_w, batch_size, max_iters, gamma):
     """
     Stochastic gradient descent algorithm.

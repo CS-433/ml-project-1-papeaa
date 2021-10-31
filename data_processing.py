@@ -52,21 +52,6 @@ def build_poly(x, degree):
     return M
 
 
-def build_advanced_poly(x, degree):
-    """
-    polynomial basis functions for input data x, for j=0 up to j=degree."""
-    M = np.ones((len(x), 2*(len(x[0])*degree)+1))
-    print(M.shape)
-    for j in range(1, degree+1):
-        M[:, (len(x[0])*(j-1)+1):(len(x[0])*j+1)] = x**j
-    for j in range(degree+1, 2*degree+1):
-        p = np.random.permutation(len(x[0]))
-        m = np.random.randint(1, degree+1)
-        n = np.random.randint(1, degree+1)
-        M[:, (len(x[0])*(j-1)+1):(len(x[0])*j+1)] = x**m*x[:, p]**n
-    return M
-
-
 def fix_nonexisting(tX, tX_test):
     """
     Replace -999 by median of the datapoint. 
