@@ -19,8 +19,9 @@ In the following, we describe the main functionality of the files in the reposit
 ├── figs    <- Figure Outputs from cross validation
 │   ├── cross_validation_least_degree.pdf
 │   ├── cross_validation_log_degree.pdf
+│   ├── cross_validation_reg_log_lambda.pdf
 │   ├── cross_validation_ridge_lamdas.pdf
-│   └── cross_validation_ridge_lamdas.pdf
+│   └── cross_validation_ridge_lamdas_with_degree.pdf
 ├── implementations.py
 ├── proj1_helpers.py
 └── run.py
@@ -42,6 +43,7 @@ Includes all functions for data splitting, cleaning, standadization and feature 
 That jupyter notebook reflects the score improvement steps, which are :
 * Cross-Validation for Least Square to find optimal degree for feature expansion
 * Cross-Validation for Ridge Regression to find optimal λ
+* Cross-Validation for Ridge Regression to find optimal λ with feature expansion
 * Cross-Validation for Logistic Regression to find optimal degree for feature expansion
 * Cross-Validation for Regularized Logistic Regression to find optimal λ
 * Run of all Method in `implementations.py` to compare results without Feature Expansion
