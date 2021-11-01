@@ -1,6 +1,7 @@
 import numpy as np
 from proj1_helpers import *
 from data_processing import *
+from implementations import *
 
 def main():
     # Import Data
@@ -18,12 +19,7 @@ def main():
     tX_test = build_poly(tX_test, 11)
 
     # Train model with optimized parameter
-    loss, w = ridge_regression(y, tX, 5e-3)
-
-    # y_test = predict_labels(w, tX)
-    # bb = y_test - y
-    # print(bb)
-    #print(np.nonzero(bb == 0) / len(y))
+    loss, w = ridge_regression(y, tX, 0.0013738237958832637)
 
     # Write Predictions to file
     OUTPUT_PATH = 'data/final-submission.csv'

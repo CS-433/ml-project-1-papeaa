@@ -4,7 +4,7 @@ The EPFL Machine Learning course's first project aims to solve the [Higgs Boson 
 
 ## Getting Started
 
-Please unzip `data/test_train.zip`! To produce the final result, run the `run.py` file with `python run.py`. Python3 and the libraries NumPy and matplotlib are required.
+Please insert `train.csv` and `test.csv` into `/data`! To produce the final result, run the `run.py` file with `python run.py`. Python3 and the libraries NumPy and matplotlib are required.
 
 ### Code Description
 In the following, we describe the main functionality of the files in the repository.
@@ -12,9 +12,8 @@ In the following, we describe the main functionality of the files in the reposit
 ```
 .
 ├── README.md
-├── data    <- Contains test, traing data & final submission
+├── data    <- Please insert train.csv and test.csv here!
 │   ├── final-submission.csv
-│   └── test_train.zip  <- Please unzip!
 ├── data_processing.py
 ├── experiments.ipynb
 ├── figs    <- Figure Outputs from cross validation
@@ -66,7 +65,7 @@ Functions *load_csv_data*, *predict_labels* and *create_csv_submission* that wer
 
 ### `run.py`
 
-Running that file produces the exact .csv predictions used in the best submission on [AIrowd](https://www.aicrowd.com/challenges/epfl-machine-learning-higgs/submissions/163555).
+Running that file produces the exact .csv predictions used in the best submission on [AIrowd](https://www.aicrowd.com/challenges/epfl-machine-learning-higgs/submissions/164057).
 
 ## Authors
 
